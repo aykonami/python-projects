@@ -1,0 +1,89 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOStypFJ+m93VD1cnhk2wF1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aykonami/python-projects/blob/main/projects/freecodecamp/bill_splitter.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pnZ9ikx18INL",
+        "outputId": "84f7c024-4612-47dd-e94a-266a5a206ecb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "total bill so far: 198.82999999999998\n",
+            "tip amount: 49.707499999999996\n",
+            "total with tip: 248.53749999999997\n",
+            "bill per person: 62.13437499999999\n",
+            "each person pays: 62.13\n"
+          ]
+        }
+      ],
+      "source": [
+        "\"\"\"\n",
+        "project: bill splitter\n",
+        "description: calculates total bill, adds tip, and splits cost among friends\n",
+        "\"\"\"\n",
+        "\n",
+        "# number of people splitting the bill\n",
+        "num_of_friends = 4\n",
+        "\n",
+        "# item costs\n",
+        "appetizers = 37.89\n",
+        "main_courses = 57.34\n",
+        "desserts = 39.39\n",
+        "drinks = 64.21\n",
+        "\n",
+        "# calculate total bill\n",
+        "running_total = appetizers + main_courses + desserts + drinks\n",
+        "print('total bill so far:', running_total)\n",
+        "\n",
+        "# calculate tip (25%)\n",
+        "tip = running_total * 0.25\n",
+        "print('tip amount:', tip)\n",
+        "\n",
+        "# add tip to total\n",
+        "running_total += tip\n",
+        "print('total with tip:', running_total)\n",
+        "\n",
+        "# split bill among friends\n",
+        "each_person = running_total / num_of_friends\n",
+        "print('bill per person:', each_person)\n",
+        "\n",
+        "# final rounded result\n",
+        "each_pays = round(each_person, 2)\n",
+        "print('each person pays:', each_pays)"
+      ]
+    }
+  ]
+}
