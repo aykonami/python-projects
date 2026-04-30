@@ -1,1 +1,1 @@
-This folder contains Python practice exercises and labs.
+This folder contains Python practice exercises, labs and libraries.
